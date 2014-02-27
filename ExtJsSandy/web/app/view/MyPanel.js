@@ -2,14 +2,24 @@
     extend: 'Ext.panel.Panel',
     alias: 'widget.mypanel',
     width: 400,
-    height: 300,
-    layout: 'column',
+    layout: 'border',
+    defaults: {
+        collapsible: true,
+        split: true,
+        bodyPadding: 5
+    },
     title: 'Hoogmaatheide portaal',
     requires: ['App.view.LeftMenu'],
     items: [{
-        xtype: 'leftmenu'
+        xtype: 'leftmenu',
+        region: 'west',
+        floatable: false,
     }, {
-        xtype: 'button',
-        text: 'button2'
+        
+            title: 'Main Content',
+            collapsible: false,
+            region: 'center',
+            margins: '5 0 0 0',
+            html: 'Main Page'
     }]
 });

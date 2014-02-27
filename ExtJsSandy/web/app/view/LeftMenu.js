@@ -7,25 +7,25 @@
     ],
     xtype: 'layout-accordion',
     layout: 'accordion',
-    width: 500,
-    height: 400,
+    width: 300,
+    title: 'Menu',
     defaults: {
-        bodyPadding: 10
+        bodyPadding: 1
     },
 
     initComponent: function () {
         Ext.apply(this, {
             items: [{
-                title: 'Accordion Item 2',
+                title: 'Reservaties',
                 html: 'Empty'
             }, {
-                title: 'Accordion Item 3',
+                title: 'Overzichten',
                 html: 'Empty'
             }, {
-                title: 'Accordion Item 4',
+                title: 'Klanten',
                 html: 'Empty'
             }, {
-                title: 'Accordion Item 5',
+                title: 'Andere',
                 html: 'Empty'
             }]
         });
