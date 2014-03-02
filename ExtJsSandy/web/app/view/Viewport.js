@@ -11,7 +11,7 @@ Ext.define('App.view.Viewport', {
         split: true,
         bodyPadding: 5
     },
-    requires: ['App.view.LeftMenu','App.view.overview.ColumnChart','App.view.HMWindow'],
+    requires: ['App.view.LeftMenu','App.view.overview.Overzicht','App.view.HMWindow'],
     items: [
         {
             id: 'app-header',
@@ -35,7 +35,7 @@ Ext.define('App.view.Viewport', {
             xtype: 'hmwindow',
             x: 50,
             y: 50,
-            items:[{xtype:'columnchart'}]
+            items: [{ xtype: 'overzicht' }]
         }],
     }
     ]

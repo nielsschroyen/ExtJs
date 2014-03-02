@@ -3,7 +3,9 @@
     alias: 'widget.leftchildmenu',
     xtype: 'array-grid',
     requires: [
-        'Ext.grid.column.Action'
+        'Ext.grid.column.Action',
+        'App.view.overview.Overzicht',
+        'App.view.overview.ColumnChart',
     ],
     hideHeaders: true,
     store: ReservatieMenu,
@@ -20,7 +22,7 @@
                 title: record.get('title'),
                 height: 400,
                 width: 400,
-               
+                items: [{ xtype: record.get('widget') }]
                 
             }).show();
         }
