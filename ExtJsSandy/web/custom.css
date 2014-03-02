@@ -3,5 +3,8 @@ color: #FFFFFF;
 font-size: 22px;
 font-weight: 200;
 padding: 8px 15px;
-text-shadow: 0 1px 0 #fff;
+}
+
+.x-grid-body {
+    border: red 1px;
 }

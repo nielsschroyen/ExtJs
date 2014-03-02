@@ -4,19 +4,20 @@ Ext.define('App.view.Viewport', {
     extend: 'Ext.container.Viewport',
     layout: {
         type: 'border',
-        padding: '0 5 5 5' // pad the layout from the window edges
+        padding: '5 5 5 5' // pad the layout from the window edges
     },
     defaults: {
         collapsible: true,
         split: true,
-        bodyPadding: 15
+        bodyPadding: 5
     },
-    requires: ['App.view.LeftMenu'], //Name must be identical to that of the Panel define i.e. Ext.define('App.view.MyPanel', { ....
+    requires: ['App.view.LeftMenu','App.view.overview.ColumnChart','App.view.HMWindow'],
     items: [
         {
             id: 'app-header',
             xtype: 'box',
             region: 'north',
+            collapsible: false,
             height: 40,
             html: 'Hoogmaatheide Portaal'
         },{
@@ -26,10 +27,16 @@ Ext.define('App.view.Viewport', {
         margins: '5 5 0 0',
     }, {
 
-        title: 'Main Content',
+        layout: 'absolute',
         collapsible: false,
         region: 'center',
         margins: '5 0 0 0',
-        html: 'Main Page'
-    }]
+        items: [{
+            xtype: 'hmwindow',
+            x: 50,
+            y: 50,
+            items:[{xtype:'columnchart'}]
+        }],
+    }
+    ]
 });

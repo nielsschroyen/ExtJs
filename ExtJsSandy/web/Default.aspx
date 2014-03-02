@@ -6,10 +6,12 @@
 <head runat="server">
     <title>ExtJs Dashboard</title>
 
-   <link href="custom.css" rel="stylesheet" />
+  
    <link href="http://cdn.sencha.io/ext/gpl/4.2.0/resources/css/ext-all-neptune.css" rel="stylesheet" />
 <script src="http://cdn.sencha.com/ext/gpl/4.2.0/ext-all.js"></script>
+    
     <script src="init.js" type="text/javascript"></script>
+     <link href="custom.css" rel="stylesheet" />
 
 </head>
 <body>

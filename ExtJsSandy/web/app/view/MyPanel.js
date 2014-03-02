@@ -16,10 +16,15 @@
         floatable: false,
     }, {
         
-            title: 'Main Content',
+            layout: 'absolute',
             collapsible: false,
             region: 'center',
             margins: '5 0 0 0',
-            html: 'Main Page'
+            items:[{
+                title: 'Panel 1',
+                x: 250,
+                y: 250,
+                html: 'Positioned at x:50, y:50'
+            }],
     }]
 });
