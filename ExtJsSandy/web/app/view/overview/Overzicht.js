@@ -2,20 +2,18 @@
     extend: 'Ext.panel.Panel',
     alias: 'widget.overzicht',
     bodyStyle: { "background-color": "white" },
+    defaultType: 'container',
     layout: {
-        type: 'border',
-        padding: '5 5 5 5' // pad the layout from the window edges
-        
+        type: 'vbox',
+        padding: '5 5 5 5',
+        align: 'stretch',
     },
 
     items: [
     {
         xtype: 'fieldset',
-        checkboxToggle: false,
-        region: 'north',
         title: 'Selecteer een periode',
         defaultType: 'textfield',
-        collapsed: false,
         layout: 'anchor',
         defaults: {
             anchor: '100%'
@@ -33,6 +31,7 @@
         }]
     }, {
         defaultType: 'container',
+        flex: 1,
         layout: {
            type: 'hbox',
            align: 'stretch',
@@ -47,11 +46,9 @@
             items: [
                 {
                 xtype: 'fieldset',
-                checkboxToggle: false,
                 title: 'Algemeen',
-                defaultType: 'textfield',
-                collapsed: false,
                 layout: 'anchor',
+                width: 350,
                 defaults: {
                 anchor: '100%'
                      },
@@ -72,10 +69,7 @@
                 },
                 {
                 xtype: 'fieldset',
-                checkboxToggle: false,
                 title: 'Services',
-                defaultType: 'textfield',
-                collapsed: false,
                 layout: 'anchor',
                 defaults: {
                 anchor: '100%'
@@ -97,12 +91,9 @@
                 }
                         
                     ]
-                    , width: 350
                 },
                 { xtype: 'linechart', flex: 1, margin:'10' }
             ]
-           ,
-            region: 'center'
         }
     ],
 });
