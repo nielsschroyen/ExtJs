@@ -62,7 +62,7 @@ Ext.onReady(function () {
 
     window.ReservatieMenu = Ext.create('Ext.data.JsonStore', {
         fields: ['title','widget'],
-        data: [{ title: 'Grafiekje', widget: 'columnchart' }, { title: 'Overzicht', widget: 'overzicht' }, { title: 'lineChart', widget: 'columnChart' }],
+        data: [{ title: 'Grafiekje', widget: 'columnchart' }, { title: 'Overzicht', widget: 'overzicht' }, { title: 'lineChart', widget: 'linechart' }],
     });
     window.storeNegatives = Ext.create('Ext.data.JsonStore', {
         fields: ['name', 'data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'data7', 'data9', 'data9'],

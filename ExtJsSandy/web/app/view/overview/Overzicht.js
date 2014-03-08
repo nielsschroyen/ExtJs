@@ -32,10 +32,77 @@
 
         }]
     }, {
-            html:'Mijn gegevens',
+        defaultType: 'container',
+        layout: {
+           type: 'hbox',
+           align: 'stretch',
+        },
+        items: [
+        {
+            defaultType: 'container',
+            layout: {
+                type: 'vbox',
+                align: 'stretch',
+            },
+            items: [
+                {
+                xtype: 'fieldset',
+                checkboxToggle: false,
+                title: 'Algemeen',
+                defaultType: 'textfield',
+                collapsed: false,
+                layout: 'anchor',
+                defaults: {
+                anchor: '100%'
+                     },
+                    items: [
+                        {
+                            xtype: 'displayfield',
+                            name: 'aantalHonden',
+                            fieldLabel: 'Aantal honden',
+                            value: '9'
+                        },
+                                {
+                                    xtype: 'displayfield',
+                                    name: 'omzet',
+                                    fieldLabel: 'Omzet',
+                                    value: '90 EUR'
+                                }
+                    ]
+                },
+                {
+                xtype: 'fieldset',
+                checkboxToggle: false,
+                title: 'Services',
+                defaultType: 'textfield',
+                collapsed: false,
+                layout: 'anchor',
+                defaults: {
+                anchor: '100%'
+                     },
+                    items: [
+                        {
+                            xtype: 'displayfield',
+                            name: 'wandelService',
+                            fieldLabel: 'Wandelservice',
+                            value: '11%'
+                        },
+                                {
+                                    xtype: 'displayfield',
+                                    name: 'speelweide',
+                                    fieldLabel: 'Speelweide',
+                                    value: '33%'
+                                }
+                    ]
+                }
+                        
+                    ]
+                    , width: 350
+                },
+                { xtype: 'linechart', flex: 1, margin:'10' }
+            ]
+           ,
             region: 'center'
         }
     ],
-
-   
 });

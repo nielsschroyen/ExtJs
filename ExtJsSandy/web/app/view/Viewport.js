@@ -25,6 +25,7 @@ Ext.define('App.view.Viewport', {
         region: 'west',
         floatable: false,
         margins: '5 5 0 0',
+
     }, {
 
         layout: 'absolute',
